@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Ricerca Comuni</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function showResults(val) {
+                if (val === '') {
+                    return;
+                }
+                fetch('app/comune?inizia=' + val, {
+                    "Accept" : "text/plain"
+                })
+                        .then(function (response) {
+                            if (response.ok)
+                                return response.text();
+                        })
+                        .then(function (text) {
+                            if (text !== undefined) {
+                                var x = document.getElementById("comuni");
+                                x.innerHTML = text;
+                                return true;
+                            } else
+                                return false;
+                        });
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="q" onKeyUp="showResults(this.value)" />
+            <div id="comuni">
+
+            </div>
+        </div>
+    </body>
+</html>

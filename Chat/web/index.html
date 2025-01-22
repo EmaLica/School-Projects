@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="websocket.js"></script>
+        <title>WebChat</title>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="username" placeholder="Inserisci username"><br>
+            <button onclick="connect()">Collegati</button> <br><br>
+
+            <input type="text" id="msg" placeholder="Digita messaggio...">
+            <button onclick="send()">Invia</button><br><br>
+
+            <input type="text" id="recipient" placeholder="Inserisci destinatario"><br><br>
+
+
+            <textarea readonly id="log" cols="30" rows="10"></textarea><br>
+        </div>
+
+    </body>
+</html>

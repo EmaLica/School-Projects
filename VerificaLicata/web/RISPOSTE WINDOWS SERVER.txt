@@ -1,0 +1,68 @@
+RISPOSTE WINDOWS SERVER:
+
+1) Aggiungere un account utente al dominio
+    Per aggiungere un account utente al dominio su windows server, questi sono i passaggi:
+    -	Si accede con un account che abbia i privilegi di amministratore di dominio.
+    -	Si apre il Server Manager.
+    -	Nella finestra del Server Manager bisogna selezionare la voce “Local Server”.
+    -	Si clicca su “Configurazione” accanto alla voce “Nome del computer” nella sezione “Proprieta del sistema”.
+    -	Nella finestra denominata impostazioni di sistema avanzate, si seleziona “impostazioni” sotto la sezione “utenti e gruppi locali”.
+    -	Nella finestra “utenti e gruppi” bisogna cliccare sul tottone “aggiungi” per aprire la finestra che permette di selezionare un utente, 
+        un computer o un gruppo.
+    -	In questa finestra si digita il nome dell’account utente che si vuole aggiungere.
+    -	Poi si clicca su “Verifica nomi”
+    -	Se il nome utente viene confermato, si clicca su OK per chiudere la finestra.
+    -	Infine nella finestra “Utenti e gruppi” si clicca su OK per aggiungere l’utetnte appena creato al dominio.
+
+2) Creazione gruppi in Active Directory
+    Per creare un gruppo in active directory su windows server, questi sono i passaggi da seguire:
+    -	Accedere al server con un account che abbia i privilegi di amministratore di dominio.
+    -	Cliccare la voce “Active directory users and computers”.
+    -	Nella finestra appena selezionata, clicca sul dominio sulla quale vuoi inserire il gruppo in modo da espanderlo.
+    -   Cliccare sulla cartella utenti e selezionare nuovo gruppo.
+    -	Nella finestra “nuovo gruppo” si deve digitare il nome del gruppo che si vuole creare.
+    -	Si puo anche aggiungere una descrizione a questo gruppo.
+    -	Nella finestra “group scope” bisogna selezionare i livelli di ambito del gruppo che possono essere di 3 livelli:
+        Gruppi con ambito universale: possono includere come membri gruppi e account appartenenti a qualsiasi dominio Windows della struttura 
+        e disporre di autorizzazioni in qualsiasi dominio di essa. 
+        Gruppi con ambito globale: possono includere come membri gruppi e account appartenenti solo al dominio in cui il gruppo è definito o 
+        in qualsiasi dominio della struttura ma possono avere autorizzazioni su qualsiasi dominio della foresta. 
+        Gruppi con ambito locale al dominio: possono includere come membri gruppi e account appartenenti solo a un dominio Windows e 
+        possono essere utilizzati per concedere autorizzazioni solo all'interno di un dominio.
+    -	Nella sezione group type selezionare altre due opzioni che rappresentano il tipo di gruppo:
+        -security
+        -distrubution
+    -   Infine cliccare OK per creare il nuovo gruppo.
+
+3) Aggiungere una workstation al dominio
+    Per aggiungere una workstation al dominio, questi sono i passaggi da seguire:
+    -	ATTENZIONE: PRIMA DI ESEGUIRE QUESTI PASSAGGI BISOGNA CONFIGURARE UN SERVER DHCP ALL'INTERNO DEL DOMINIO.
+    -	Accedere alla workstation che si vuole aggiungere al dominio con un account amministratore locale.
+    -   Aprire le impostazioni di sistema avanzate cliccando sull'icona "Questo PC" e selezionando "proprieta".
+    -   Nella finestra proprieta di sistema, cliccare su impostazioni di sistema avanzate, selezionare
+        la finestra nome computer e fare click sul pulsante modifica.
+    -   Nella finestra "Modifica impostazioni" selezionare l'opzione "Dominio" e inserire il nome completo del dominio
+        alla quale si vuole unire la macchina.è
+    -   Fare click su OK e inserire le credenziali dell'amministratore di dominio.
+    -   Infine, la macchina non viene subito aggiunta al dominio, ma verrà aggiunta solo al suo riavvio.
+
+4) Mappare automaticamente una cartella condivisa
+    Per mappare automaticamente una cartella condivisa, questi sono i passaggi da seguire:
+    -	Accedere al server con un account che abbia i privilegi di amministratore di dominio.
+
+5) Mappare cartelle personali
+    Per mappare le cartelle personali, questi sono i passaggi da seguire:
+    -	Accedere al server con un account che abbia i privilegi di amministratore di dominio.
+    -   Aprire la voce "Active directory users and computers".
+    -   Selezionare l'utente a cui si vuole assegnare la cartella.
+    -   Cliccare con il tasto destro sull'utente e selezionare la voce "proprieta".
+    -   Nella finestra proprieta dell'untente selezionare "profilo".
+    -   In "home folder" selezionare l'opzione connect e scegliere una lettera per l'unità du rete.
+    -   Nella casella "To" digitare il path della cartella dell'utente.
+    -   Selezionare "Reconnect to logon" per consentire la connessione automatica della cartella ogni volta che l'utente si riconnette.
+        Se questa impostazione non dovesse essere selezionata, al riavvio della macchina utente la cartella mappata in precedenza
+        si perde.
+    -   Cliccare infine "Applica" e poi la voce OK per confermare la mappatura della cartella personale.
+
+
+
