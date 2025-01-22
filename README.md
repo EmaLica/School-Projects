@@ -128,7 +128,7 @@ This repository contains a collection of **Java projects** that I developed duri
 
 1. Clone the repository:
    ```bash
-   [git clone https://github.com/your-username/java-school-projects.git](https://github.com/EmaLica/School-Projects.git)
+   git clone https://github.com/your-username/java-school-projects.git
 2. Navigate to the project folder you want to explore.
 3. Open the project in your favorite IDE (e.g., IntelliJ IDEA, Eclipse, NetBeans).
 4. Build and run the project as per the instructions in the respective folder.
